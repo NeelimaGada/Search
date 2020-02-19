@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">Navbar</a>
+    <app-header *ngIf="hide" (show)="fn($event)"></app-header>
+</nav>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-3  ">
+            <button class="btn btn-success" (click)="enable()"> Enable Search Button</button>
+        </div>
+        <div class="col-9">
+           <app-list [list]="data"></app-list>
+        </div>
+    </div>
+</div>
+
